@@ -10,12 +10,12 @@
           <when>
             <eq>
               <mod>
-                <v>i</v>
+                <get><v>i</v></get>
                 <n>2</n>
               </mod>
               <n>0</n>
             </eq>
-            <call target="console.log"><v>i</v></call>
+            <call><get><v>console</v><s>log</s></get><get><v>i</v></get></call>
           </when>
         </cond>
       </for>

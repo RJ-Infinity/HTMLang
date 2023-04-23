@@ -6,47 +6,50 @@
   <body>
     <h3>Look into the DevTools Console</h3>
     <htmlang style="display: none;">
-      <call target="console.log"><s>Generating FizzBuzz...</s></call>
+      <call><get><v>console</v><s>log</s></get><s>Generating FizzBuzz...</s></call>
       <for><v>i</v> <n>1</n> <n>100</n>
         <cond>
           <when>
             <eq>
               <mod>
-                <v>i</v>
+                <get><v>i</v></get>
                 <n>15</n>
               </mod>
               <n>0</n>
             </eq>
-            <call target="console.log">
+            <call>
+              <get><v>console</v><s>log</s></get>
               <s>FizzBuzz</s>
             </call>
           </when>
           <when>
             <eq>
               <mod>
-                <v>i</v>
+                <get><v>i</v></get>
                 <n>3</n>
               </mod>
               <n>0</n>
             </eq>
-            <call target="console.log">
+            <call>
+              <get><v>console</v><s>log</s></get>
               <s>Fizz</s>
             </call>
           </when>
           <when>
             <eq>
               <mod>
-                <v>i</v>
+                <get><v>i</v></get>
                 <n>5</n>
               </mod>
               <n>0</n>
             </eq>
-            <call target="console.log">
+            <call>
+              <get><v>console</v><s>log</s></get>
               <s>Buzz</s>
             </call>
           </when>
           <else>
-            <call target="console.log"><v>i</v></call>
+            <call><get><v>console</v><s>log</s></get><get><v>i</v></get></call>
           </else>
         </cond>
       </for>

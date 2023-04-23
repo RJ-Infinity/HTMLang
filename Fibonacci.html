@@ -5,7 +5,7 @@
   </head>
   <body>
     <htmlang style="display: none;">
-      <call target="console.log"><s>Generating Fibonacci Numbers...</s></call>
+      <call><get><v>console</v><s>log</s></get><s>Generating Fibonacci Numbers...</s></call>
       <let>
         <v>a</v>
         <n>0</n>
@@ -15,16 +15,16 @@
         <n>1</n>
       </let>
       <for> <v>i</v> <n>1</n> <n>30</n>
-        <call target="console.log"><v>a</v></call>
+        <call><get><v>console</v><s>log</s></get><get><v>a</v></get></call>
         <let>
           <v>c</v>
           <sum>
-            <v>a</v>
-            <v>b</v>
+            <get><v>a</v></get>
+            <get><v>b</v></get>
           </sum>
         </let>
-        <set><v>a</v><v>b</v></set>
-        <set><v>b</v><v>c</v></set>
+        <set><v>a</v><get><v>b</v></get></set>
+        <set><v>b</v><get><v>c</v></get></set>
       </for>
     </htmlang>
     <script src="./HTMLang.js"></script>

@@ -7,38 +7,49 @@
     <htmlang style="display:none;">
       <let>
         <v>c</v>
-        <call target="document.getElementById">
+        <call>
+          <get><v>document</v><s>getElementById</s></get>
           <s>myCanvas</s>
         </call>
       </let>
       <let>
         <v>ctx</v>
-        <call target="c.getContext">
+        <call>
+          <get><v>c</v><s>getContext</s></get>
           <s>2d</s>
         </call>
       </let>
 
-      <call target="ctx.moveTo">
+      <call>
+        <get><v>ctx</v><s>moveTo</s></get>
         <n>0</n>
         <n>0</n>
       </call>
-      <call target="ctx.lineTo">
-        <v>c.width</v>
-        <v>c.height</v>
+      <call>
+        <get><v>ctx</v><s>lineTo</s></get>
+        <get><v>c</v><s>width</s></get>
+        <get><v>c</v><s>height</s></get>
       </call>
-      <call target="ctx.stroke"></call>
+      <call>
+        <get><v>ctx</v><s>stroke</s></get>
+      </call>
 
-      <call target="ctx.moveTo">
+      <call>
+        <get><v>ctx</v><s>moveTo</s></get>
         <n>0</n>
-        <v>c.height</v>
+        <get><v>c</v><s>height</s></get>
       </call>
-      <call target="ctx.lineTo">
-        <v>c.width</v>
+      <call>
+        <get><v>ctx</v><s>lineTo</s></get>
+        <get><v>c</v><s>width</s></get>
         <n>0</n>
       </call>
-      <call target="ctx.stroke"></call>
+      <call>
+        <get><v>ctx</v><s>stroke</s></get>
+      </call>
 
-      <call target="ctx.fillText">
+      <call>
+        <get><v>ctx</v><s>fillText</s></get>
         <s>Hello World</s>
         <n>10</n>
         <n>50</n>
